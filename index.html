@@ -34,12 +34,37 @@
 
         </ul>
         <button class="navigation__icon">
-            <svg class="icon icon-pencil, write, blog, save, note">
+            <svg class="icon icon-menu">
                 <use xlink:href="/icomoon/sprite.svg#icon-menu"></use>
             </svg>
         </button>
     </nav>
+    <nav class="mobile" id="mobile" style="display: none;">
+        <button class="mobile__icon">
+            <svg class="icon icon-menu">
+                <use xlink:href="/icomoon/sprite.svg#icon-cross"></use>
+            </svg>
+        </button>
+        <ul class="navigation">
+            <li class="navigation__item">
+                <a href="#home" class="navigation__link">Home</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#services" class="navigation__link">Services</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#works" class="navigation__link">Our Works</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#clients" class="navigation__link">Clients</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#contacts" class="navigation__link">Contact</a>
+            </li>
 
+        </ul>
+
+    </nav>
     <header class="home" id="home">
         <div class="hero__firstIntro">
             <p>Unhappy with your website?</p>
@@ -203,6 +228,26 @@
 
     </footer>
     <script>
+        const menuButton = document.querySelector('.navigation__icon');
+        const mobileMenu = document.querySelector('#mobile');
+        const mobileIcon = document.querySelector('.mobile__icon');
+
+        function displayMenuItem() {
+
+            if (mobileMenu.style.display == "none") {
+                mobileMenu.style.display = "block";
+                mobileMenu.style.width = "100%";
+            }
+        }
+
+        function hideMenuItem() {
+            if (mobileMenu.style.display == "block") {
+                mobileMenu.style.display = "none";
+                mobileMenu.style.width = "0px";
+            }
+        }
+        menuButton.addEventListener('click', displayMenuItem);
+        mobileIcon.addEventListener('click', hideMenuItem);
     </script>
 </body>
 
