@@ -152,7 +152,7 @@ body {
     margin: 4rem 0px;
     overflow: hidden; }
     .hero__figure--image {
-      width: 100%;
+      max-width: 100%;
       object-fit: contain; }
   .hero__secondIntro {
     grid-column: 2/5;
@@ -276,7 +276,7 @@ body {
     width: 44rem;
     grid-column: 1/-1; }
   .works .work img {
-    width: 100%; }
+    max-width: 100%; }
   .works .work figure {
     border-radius: 16px;
     overflow: hidden;
@@ -371,7 +371,7 @@ body {
     max-width: 6rem;
     margin-right: 1.5rem; }
     .clients .client__image img {
-      width: 100%; }
+      max-width: 100%; }
   .clients .client__detail {
     display: flex;
     flex-direction: column;
